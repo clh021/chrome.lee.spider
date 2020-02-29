@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>设置窗</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="popupOnload.js"></script>
+        <style type="text/css">html,body{overflow: hidden;display: block;height: 320px;}</style>
+    </head>
+    <body>
+        <p>
+            起点:<br>
+            <input id="start" size=40>
+        </p>
+
+        <p>
+            限制:<br>
+            <input id="regex" size=40>
+        </p>
+        <p>
+            <input id="plusone" type="checkbox">
+            <label for="plusone">跟踪超越限制的连接</label>
+        </p>
+        <p>
+            <input id="inline" type="checkbox">
+            <label for="inline">检查关联内容
+                <small>(CSS, images)</small></label>
+        </p>
+        <p>
+            <input id="scripts" type="checkbox">
+            <label for="scripts">检查脚本内容
+                <small>(JavaScript, Flash)</small></label>
+        </p>
+        <p>
+            <input id="arguments" type="checkbox">
+            <label for="arguments">避开包含参数的连接
+                <small>(e.g.&nbsp;page?foo=bar)</small></label>
+        </p>
+        <p>
+            <input id="verboseInline" type="checkbox">
+            <label for="verboseInline">报告所有关联内容
+                <small>(耗时)</small></label>
+        </p>
+        <p>
+            <input id="verboseScripts" type="checkbox">
+            <label for="verboseScripts">报告所有脚本内容
+                <small>(耗时)</small></label>
+        </p>
+
+        <p>
+            <input type="button" value="开始" id="siteSpiderGo">
+        </p>
+
+    </body>
+</html>

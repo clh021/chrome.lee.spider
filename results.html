@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>站点爬行报表</title>
+<meta charset="UTF-8">
+<script type="text/javascript" src="resultsOnload.js"></script>
+<style type="text/css">
+  body {
+    font-family: sans-serif
+  }
+  #resultsTable {
+    border-spacing: 1px;
+    margin: 15px;
+    width: 99%;
+    table-layout: fixed;
+  }
+  #resultsTable th {
+    text-align: left;
+    background-color: #d0d0d0;
+  }
+  #resultsTable td, #resultsTable th {
+    font-size: 9pt;
+    padding: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #resultsTable td.x0 {
+    color: #c00;
+  }
+  #resultsTable tr:hover {
+    background: #ffa;
+  }
+  #startingOn, #restrictTo {
+    font-family: monospace;
+  }
+</style>
+</head>
+<body>
+<form style="float:right">
+<input type="button" id="pauseSpider" value="Pause"/>
+<input type="button" id="stopSpider" value="Stop"/>
+</form>
+
+起点:<span id="startingOn"></span>限制:</td><span id="restrictTo"></span>队列:<span id="queue">0</span><br />状态:<span id="status">Initializing...</span>
+
+<table id="resultsTable">
+  <colgroup>
+    <col style="width: 32%">
+    <col style="width: 32%">
+    <col style="width: 32%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th class="nocase">Request</th>
+      <th class="nocase">Status</th>
+      <th class="nocase">Referrer</th>
+    </tr>
+  </thead>
+  <tbody id="resultbody">
+  </tbody>
+</table>
+
+<table style="display:none" id="verboseTable">
+  <colgroup>
+    <col style="width: 48%">
+    <col style="width: 48%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th class="nocase">Referrer</th>
+      <th class="nocase">Found</th>
+    </tr>
+  </thead>
+  <tbody id="verbosebody">
+  </tbody>
+</table>
+
+</body>
+</html>
